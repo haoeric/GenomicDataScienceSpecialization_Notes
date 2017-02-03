@@ -1,0 +1,60 @@
+This lecture is a brief diversion where
+we'll discuss repetitive elements, what they are, and why they occur. And why they're something that we
+are going to want to keep in mind as we discuss the read alignment and
+assembly problems. So a human genome sequence that we
+observed today is the end result of a pretty complex evolutionary process. And that process tends to introduce
+certain kinds of patterns into the genome. Patterns that make the genome sequence
+very different from the kind of sequence that you would get if you
+generated it randomly. Like for example,
+by flipping a coin over and over again, or by using a Python pseudorandom generator
+function to generate a random genome. Maybe the most striking
+example of this fact is that the human genome is extremely repetitive. It's far more repetitive than
+a random string would be. And so what do what I mean by this? Well some pretty interesting things
+happen to genomes over time. One thing that happens is that
+the genome gets invaded and infiltrated by little bits of DNA, sort of DNA
+interlopers called transposable elements. And these are tiny little chunks of DNA
+that are capable of getting themselves incorporated into the genome. And then when conditions are right,
+they're also capable of copying and pasting themselves, or cutting and
+pasting themselves, throughout the genome. So this diagram shows one such example of
+how a cut-and-paste mechanism happens, how a transposable element can cut and
+paste itself throughout the genome and it does this with the help of an important
+protein called a transposase. So this kind of thing has happened many, many times throughout evolutionary history
+to the human genome to the point where about 45% of the human genome sequence
+is covered by transposable elements. 45% of all the bases in human genome
+came from a transposable element, and there are many different kinds
+of transposable elements, as you can see from this pie chart here. They come in various abundances. And then, there's one
+particularly renowned example of a transposable element
+which is called Alu, which is highlighted right here
+in this red bit of the pie chart. So Alus actually occur many times in
+the genome, more than a million times. And about 11 or so percent of the human genome sequence
+is covered by these things called Alus. So why should we care about these
+repetitive portions of the genome? Do they really affect whether we
+can design good algorithms for solving the read alignment problem and
+the assembly problem? Well, actually they do. So they do because they create ambiguity. And if there are, for example 1 million
+copies of the Alu element, and one of our sequencing reads comes from inside one
+of those copies of the Alu element, and then we want to solve our read
+alignment problem, you can imagine, that's difficult. There's ambiguity. It's going to be very difficult to figure
+out exactly which copy of the Alu repeat our sequencing read came from,
+or maybe even impossible. So here's a illustration of this. So here is actually a picture of all
+the chromosomes of the human genome, and everywhere where you see
+glowing green on this picture, that's a place where there
+are Alus in the genome. So, they're spread all over. And if we're in a situation, let's say, now this is a schematic version of our
+genome that has some unique sequences, some non-repetitive sequences
+which are shown in blue. And it also has many
+copies of the same repeat. Maybe it's the Alu repeat, but
+those copies are shown in red. And let's say we get some sequencing reads
+from the blue portions of the genome and we try to solve the read
+alignment problem. Well, that's good because we'll be able to
+resolve where they come from because they come from non-repetitive
+portions of the genome. Now, let's say we have a read that comes
+from inside one of the copies of this repetitive element in the genome. And this occurs in several copies,
+including the three that you see here. Well we're not really going to have any
+idea whether the read came from the copy that it truly came from, or whether
+it came from one of the other copies. There's just going to be inherent
+ambiguity in the read alignment problem in that sense. So in our puzzle analogy, you could
+say this is a little bit like a puzzle where half the pieces are just featureless
+blue sky, or something like that. So that if you're trying to figure out
+where one of those pieces comes from, it's going to be very difficult to
+distinguish which part of the sky it actually comes from. And then later when we talk about
+assembly, we'll see some other important ways in which repetitive sequences in the
+genome are going to create problems for our algorithms.
