@@ -58,7 +58,7 @@ samtools view -h example.bam > example.sam
 ##------------------------ Exam 2 ---------------------------##
 
 # download data from  https://d396qusza40orc.cloudfront.net/gencommand/gencommand_proj2_data.tar.gz
-tar -zxvf gencommand_proj2_data.tar.gz
+tar -zxvf gencommand_proj3_data.tar.gz
 
 
 ## 1. How many alignments does the set contain?
